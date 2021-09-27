@@ -98,9 +98,9 @@ func (d *Data) decodeCSV() ([]uint32, error) {
 
 	gids := make([]uint32, len(str))
 	for i, s := range str {
-		var id uint64
+		var id int64
 		var err error
-		if id, err = strconv.ParseUint(s, 10, 32); err != nil {
+		if id, err = strconv.ParseInt(s, 10, 32); err != nil {
 			return nil, err
 		}
 		gids[i] = uint32(id)
