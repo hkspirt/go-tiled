@@ -67,7 +67,7 @@ type Terrain struct {
 	// The name of the terrain type.
 	Name string `xml:"name,attr"`
 	// The local tile-id of the tile that represents the terrain visually.
-	Tile uint32 `xml:"tile,attr"`
+	Tile int32 `xml:"tile,attr"`
 	// Custom properties
 	Properties Properties `xml:"properties>property"`
 }
